@@ -76,15 +76,15 @@ def result():
         result = ValuePredictor(to_predict_list)
 
         if int(result) == 0:
-            prediction = 'Low annual income low score'
+            prediction = 'Low annual income with Low score'
         elif int(result) == 1:
-            prediction = 'High annual income high score'
+            prediction = 'Medium to High annual income with High score'
         elif int(result) == 2:
-            prediction = 'High annual income low score'
+            prediction = 'Medium to High annual income with Low score'
         elif int(result) == 3:
-            prediction = 'Medium annual income and score'
+            prediction = 'Medium annual income with Medium score'
         elif int(result) == 4:
-            prediction = 'Low annual income and high score'
+            prediction = 'Low annual income with High score'
 
         with app.app_context():
             customer1 = Customer(name=name, email=email, gender=gender, age=age, annual_income=annual_income, spending_score=spending_score, cluster=int(result))
