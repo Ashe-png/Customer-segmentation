@@ -92,10 +92,10 @@ def result():
                 db.session.add(customer1)
                 db.session.commit()
                 message = 'Added to Database'
-                if customer1.cluster == 1:
-                    subject = "NAYA BARSA KO DHAMAKA"
-                    body = "Dear customer, On the occasion of New Year 2080 you can use PROMO CODE: NAYABARSA2080 and get 20 percent off on every item  your purchase"
-                    send_email(customer1.email, subject, body)
+                # if customer1.cluster == 1:
+                #     subject = "NAYA BARSA KO DHAMAKA"
+                #     body = "Dear customer, On the occasion of New Year 2080 you can use PROMO CODE: NAYABARSA2080 and get 20 percent off on every item  your purchase"
+                #     send_email(customer1.email, subject, body)
             except IntegrityError:
                 db.session.rollback()
                 message = f'Customer with email {email} already exists in database'
