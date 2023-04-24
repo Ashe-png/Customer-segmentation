@@ -47,7 +47,6 @@ def index():
 
 
 # prediction function
-# Memprediksi input dari form user
 def ValuePredictor(to_predict_list):
     to_predict = np.array(to_predict_list).reshape(1, 3)
     loaded_model = pickle.load(
