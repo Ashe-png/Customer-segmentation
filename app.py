@@ -132,5 +132,3 @@ def delete_all():
 
 if __name__ == "__main__":
     app.run()  # use debug = False for jupyter notebook
-
-import sqlite3
